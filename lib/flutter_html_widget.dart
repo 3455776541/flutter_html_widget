@@ -18,6 +18,9 @@ class HtmlWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if(html==null){
+      return Container();
+    }
     // wipe out <i> <b> <span>
     final strippedHtml = html.replaceAll(new RegExp("<\/*(i|b|span)>"), '');
 
